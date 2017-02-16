@@ -54,10 +54,10 @@ size:
 
 ```
 
-Mmake provides a `help` command to display all target comments in short form:
+Nmake provides a `help` command to display all target comments in short form:
 
 ```
-$ alias make=mmake
+$ alias make=nmake
 $ make help
 
   start      Start the dev server.
@@ -92,14 +92,9 @@ $ make size
 ### Remote includes (WIP)
 
 
-## Registry
-
-If you're looking to find or share makefiles check out the [Wiki](https://github.com/tj/mmake/wiki/Registry), and feel free to add a category if it is missing.
-
 ## Links
 
-- [mmake](https://github.com/tj/mmake) Nmake
-- [Announcement](https://medium.com/@tjholowaychuk/modern-make-b55d53cf80d9#.q1u1knrf5) blog post
+- [mmake](https://github.com/tj/mmake) Mmake
 
 ## Badges
 
