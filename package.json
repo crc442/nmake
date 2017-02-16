@@ -1,0 +1,26 @@
+{
+  "name": "nmake",
+  "version": "1.0.0",
+  "description": "js make wrapper",
+  "main": "index.js",
+  "bin": {
+    "nmake": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crc442/nmake.git"
+  },
+  "keywords": [
+    "make",
+    "wrapper"
+  ],
+  "author": "Chirag Chauhan <crc442@nyu.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crc442/nmake/issues"
+  },
+  "homepage": "https://github.com/crc442/nmake#readme",
+}
