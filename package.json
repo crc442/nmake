@@ -1,6 +1,6 @@
 {
   "name": "nmake",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "js make wrapper",
   "main": "index.js",
   "bin": {
