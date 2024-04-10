@@ -1,4 +1,6 @@
-const Parser = require('./')
+const test = require("node:test");
+const assert = require("node:assert");
+const Parser = require("./");
 
 const testString = `
 # Run all tests.
@@ -16,10 +18,20 @@ install:
 build:
 	@echo "Run build echo."
 .PHONY: build
-`
+`;
 
-// test
-let parser = Parser(testString);
-for(let nodes of parser) {
-	console.log(nodes);
-}
+test("Parser", () => {
+  const expected = [
+    { comment: "Run all tests.\ndouble tests", target: "test" },
+    { comment: "Install the program.", target: "install" },
+    { comment: "Build release.", target: "build" },
+  ];
+
+  const parser = Parser(testString);
+  let result = [];
+  for (const nodes of parser) {
+    result.push(nodes);
+  }
+
+  assert.deepStrictEqual(expected, result);
+});
