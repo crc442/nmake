@@ -1,6 +1,6 @@
-const test = require("node:test");
-const assert = require("node:assert");
-const Parser = require("./");
+import assert from "node:assert";
+import test from "node:test";
+import Parser from "./";
 
 const testString = `
 # Run all tests.
@@ -28,10 +28,7 @@ test("Parser", () => {
   ];
 
   const parser = Parser(testString);
-  let result = [];
-  for (const nodes of parser) {
-    result.push(nodes);
-  }
+  const result = Array.from(parser);
 
   assert.deepStrictEqual(expected, result);
 });
