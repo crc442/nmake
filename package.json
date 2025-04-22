@@ -2,12 +2,21 @@
   "name": "nmake",
   "version": "1.0.1",
   "description": "js make wrapper",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "nmake": "./index.js"
+    "nmake": "./dist/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "lint": "node --check && node --test-only && tsc --noEmit",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -24,6 +33,12 @@
   },
   "homepage": "https://github.com/crc442/nmake#readme",
   "devDependencies": {
-    "@types/node": "^22.14.0"
+    "@types/node": "^22.14.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "winston": "^3.11.0"
   }
 }
